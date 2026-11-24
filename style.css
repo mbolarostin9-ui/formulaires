@@ -1,0 +1,296 @@
+
+/* 1. Endriky ny pejy manontolo */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #243247;
+    line-height: 1.6;
+}
+
+/* 2. Boaty lehibe */
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* 3. Lohateny */
+.entete {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    color: white;
+    background-color: #1769aa;
+    border-radius: 8px;
+}
+
+.entete h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.entete p {
+    margin-bottom: 0;
+}
+
+/* 4. Fizarana tsirairay */
+fieldset {
+    margin-bottom: 22px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+/* 5. Anaran'ny saha */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* 6. Saha fampidirana */
+input:not([type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 16px;
+    font: inherit;
+    border: 1px solid #bdc8d5;
+    border-radius: 6px;
+    background-color: white;
+}
+
+/* 7. Rehefa tsindriana ny saha */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1769aa;
+    border-color: #1769aa;
+}
+
+/* 8. Consentement */
+.consentement {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.consentement input {
+    margin-top: 6px;
+}
+
+.consentement label {
+    font-weight: normal;
+}
+
+/* 9. Bokotra */
+.boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1769aa;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #105487;
+}
+
+button.secondaire {
+    background-color: #64748b;
+}
+
+button.secondaire:hover {
+    background-color: #475569;
+}
+
+/* 10. Farany ambany */
+footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* 11. Fampifanarahana amin'ny finday */
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .entete h1 {
+        font-size: 22px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    .boutons {
+        flex-direction: column;
+    }
+}
+
+/* ===== VERSION RESPONSIVE ===== */
+
+/* Fomba fandrefesana ny singa rehetra */
+* {
+    box-sizing: border-box;
+}
+
+/* Pejy manontolo */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+}
+
+/* Boaty lehibe */
+.container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* Lohateny */
+.entete h1 {
+    font-size: 28px;
+    overflow-wrap: anywhere;
+}
+
+/* Fizarana */
+fieldset {
+    min-width: 0;
+    margin: 0 0 20px;
+    padding: 18px;
+}
+
+/* Saha rehetra */
+input:not([type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border: 1px solid #bdc8d5;
+    border-radius: 6px;
+}
+
+/* Bokotra */
+.boutons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    min-height: 46px;
+    flex: 1 1 200px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* ===== FINDAY ===== */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .entete {
+        padding: 16px 10px;
+    }
+
+    .entete h1 {
+        font-size: 22px;
+    }
+
+    .entete p {
+        font-size: 14px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    legend {
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .boutons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        flex: auto;
+    }
+}
+
+/* ===== FINDAY TENA KELY ===== */
+@media screen and (max-width: 360px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .entete h1 {
+        font-size: 19px;
+    }
+
+    fieldset {
+        padding: 8px;
+    }
+}
+

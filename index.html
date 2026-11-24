@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulaire d'enquête</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="entete">
+            <h1>Formulaire d'enquête</h1>
+            <p>Collecte de données des ménages</p>
+        </header>
+
+        <form action="#" method="post">
+
+            <!-- SECTION 1 : ENQUETEUR -->
+            <fieldset>
+                <legend>1. Informations sur l'enquête</legend>
+
+                <label for="enqueteur">
+                    Nom de l'enquêteur
+                </label>
+                <input
+                    type="text"
+                    id="enqueteur"
+                    name="enqueteur"
+                    required
+                >
+
+                <label for="date_enquete">
+                    Date de l'enquête
+                </label>
+                <input
+                    type="date"
+                    id="date_enquete"
+                    name="date_enquete"
+                    required
+                >
+
+                <label for="code_menage">
+                    Code du ménage
+                </label>
+                <input
+                    type="text"
+                    id="code_menage"
+                    name="code_menage"
+                    placeholder="Ex : MEN-001"
+                    required
+                >
+            </fieldset>
+
+            <!-- SECTION 2 : REPONDANT -->
+            <fieldset>
+                <legend>2. Informations sur le répondant</legend>
+
+                <label for="nom">
+                    Nom du répondant
+                </label>
+                <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    required
+                >
+
+                <label for="age">
+                    Âge
+                </label>
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="0"
+                    max="120"
+                    required
+                >
+
+                <label for="sexe">
+                    Sexe
+                </label>
+                <select id="sexe" name="sexe" required>
+                    <option value="">-- Choisir --</option>
+                    <option value="homme">Homme</option>
+                    <option value="femme">Femme</option>
+                    <option value="autre">Autre / préfère préciser</option>
+                    <option value="non_repondu">Préfère ne pas répondre</option>
+                </select>
+
+                <label for="telephone">
+                    Téléphone (facultatif)
+                </label>
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    placeholder="Ex : 034 00 000 00"
+                >
+            </fieldset>
+
+            <!-- SECTION 3 : LOCALISATION -->
+            <fieldset>
+                <legend>3. Localisation du ménage</legend>
+
+                <label for="region">Région</label>
+                <input
+                    type="text"
+                    id="region"
+                    name="region"
+                    required
+                >
+
+                <label for="district">District</label>
+                <input
+                    type="text"
+                    id="district"
+                    name="district"
+                    required
+                >
+
+                <label for="commune">Commune</label>
+                <input
+                    type="text"
+                    id="commune"
+                    name="commune"
+                    required
+                >
+
+                <label for="fokontany">Fokontany</label>
+                <input
+                    type="text"
+                    id="fokontany"
+                    name="fokontany"
+                    required
+                >
+            </fieldset>
+
+            <!-- SECTION 4 : MENAGE -->
+            <fieldset>
+                <legend>4. Informations sur le ménage</legend>
+
+                <label for="effectif">
+                    Nombre de personnes dans le ménage
+                </label>
+                <input
+                    type="number"
+                    id="effectif"
+                    name="effectif"
+                    min="1"
+                    required
+                >
+
+                <label for="revenu">
+                    Principale source de revenu
+                </label>
+                <select id="revenu" name="revenu" required>
+                    <option value="">-- Choisir --</option>
+                    <option value="agriculture">Agriculture / élevage</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="salaire">Salaire</option>
+                    <option value="journalier">Travail journalier</option>
+                    <option value="autre">Autre</option>
+                </select>
+
+                <label for="observation">
+                    Observations de l'enquêteur
+                </label>
+                <textarea
+                    id="observation"
+                    name="observation"
+                    rows="4"
+                    placeholder="Écrire les observations ici..."
+                ></textarea>
+            </fieldset>
+
+            <!-- CONSENTEMENT -->
+            <div class="consentement">
+                <input
+                    type="checkbox"
+                    id="consentement"
+                    name="consentement"
+                    required
+                >
+                <label for="consentement">
+                    Le répondant a été informé de l'objectif
+                    de l'enquête et accepte de participer.
+                </label>
+            </div>
+
+            <div class="boutons">
+                <button type="submit">Envoyer le formulaire</button>
+                <button type="reset" class="secondaire">
+                    Effacer les champs
+                </button>
+            </div>
+
+        </form>
+
+        <footer>
+            <p>Formulaire pédagogique de collecte de données by Rostin</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
